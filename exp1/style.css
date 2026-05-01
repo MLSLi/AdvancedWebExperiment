@@ -1,0 +1,41 @@
+.background-top {
+    width: 100%;
+    height: 400px;
+    background-image: url('img_res/home_banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.grey-background {
+    background-color: #f4f4f4;
+}
+
+.btn-transparent {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-grey {
+    color: #757575;
+    border: 2px solid #757575;
+}
+
+.btn-learn-right-now {
+    background-color: white;
+    color: blue;
+}
+
+.btn-transparent:hover {
+    background-color: white;
+    color: #333;
+}
+
+.white-text {
+    color: white;
+}
+
+blue-text {
+    color: blue;
+}
