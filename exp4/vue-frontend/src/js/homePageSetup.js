@@ -1,5 +1,4 @@
 import { ref } from "vue";
-import axios from "axios";
 import { userLogin, userRegister } from "@/api/user";
 
 export default function useHomePage() {

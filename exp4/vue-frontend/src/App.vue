@@ -4,7 +4,7 @@
     <div class="container background-top">
       <div class="row mx-5">
         <div class="col mt-2">
-          <img src="/assets/logo_white.svg" alt="SVG Image" />
+          <img :src="logoWhite" alt="SVG Image" />
         </div>
         <div class="col d-flex justify-content-end">
           <button
@@ -55,7 +55,7 @@
     <div class="container background-grey">
       <div class="row pt-5">
         <div class="col text-center">
-          <img src="/assets/img_lab.png" />
+          <img :src="imgLab" />
         </div>
       </div>
       <div class="mt-2 ms-5">
@@ -77,7 +77,7 @@
     <div class="container">
       <div class="row mt-5">
         <div class="col text-center">
-          <img src="/assets/img_screens.png" />
+          <img :src="imgScreens" />
         </div>
       </div>
       <div class="ms-5 mt-5">
@@ -107,19 +107,22 @@
       <div class="row pt-5">
         <FeatureCard
           wrapperClass="mx-5"
-          icon="/assets/icon_show_window.png"
+          :icon="iconShowWindow"
           title="丰富的教学服务"
           description="特色教学服务功能，各种配套教学服务，在线学习从未如此轻松。"
+          :jumpReact="jumpReact"
         />
         <FeatureCard
-          icon="/assets/icon_user.png"
+          :icon="iconUser"
           title="多元的学习方式"
           description="知识提炼、答疑解惑、实时互动、开发有特色的教学服务方式。"
+          :jumpReact="jumpReact"
         />
         <FeatureCard
-          icon="/assets/icon_setting.png"
+          :icon="iconSetting"
           title="高品质的学习体验"
           description="多屏合一，随时学习，随时在线，学习记录一目了然，知识充电不再受限。"
+          :jumpReact="jumpReact"
         />
       </div>
     </div>
@@ -213,6 +216,13 @@ import FeatureCard from "./components/FeatureCard.vue";
 
 import useHomePage from "./js/homePageSetup.js";
 
+import logoWhite from "@/assets/logo_white.svg";
+import imgLab from "@/assets/img_lab.png";
+import imgScreens from "@/assets/img_screens.png";
+import iconShowWindow from "@/assets/icon_show_window.png";
+import iconUser from "@/assets/icon_user.png";
+import iconSetting from "@/assets/icon_setting.png";
+
 const {
   showLogin,
   showRegister,
@@ -237,7 +247,7 @@ const {
 .background-top {
   width: 100%;
   height: 400px;
-  background-image: url("/assets/home_banner.jpg");
+  background-image: url("~@/assets/home_banner.jpg");
   background-size: cover;
   background-position: center;
 }

@@ -12,15 +12,17 @@
 </template>
 
 <script setup>
-import useHomePage from '../js/homePageSetup.js'
+import useHomepage from "../js/homePageSetup.js";
 
-const { jumpReact } = useHomePage()
+const { jumpReact } = useHomepage();
+
 defineProps({
   icon: { type: String, required: true },
   title: { type: String, required: true },
   description: { type: String, required: true },
-  wrapperClass: { type: String, default: '' },
-})
+  wrapperClass: { type: String, default: "" },
+  jumpReact: { type: Function, required: true },
+});
 </script>
 
 <style scoped>
